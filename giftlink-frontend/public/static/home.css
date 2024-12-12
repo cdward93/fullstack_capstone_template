@@ -1,19 +1,90 @@
 /* Task 1: Style the body */
 body {
-    /* insert code here */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f4f4f4;
 }
 
 /* Task 2: Create a pseudo-element for the background and blur */
 body::before {
-    /* insert code here */
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('your-image-url.jpg') no-repeat center center;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: -1; /* Ensures the pseudo-element stays behind other content */
 }
 
 /* Task 3: Style the content area */
 .content {
-    /* insert code here */
+    position: relative;
+    z-index: 1; /* Ensures it’s above the background */
+    text-align: center; /* Adjust text alignment as needed */
+    color: #333; /* Set text color */
+    max-width: 800px; /* Set maximum width */
+    padding: 20px; /* Apply padding for spacing */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    margin: 0 auto; /* Center the content horizontally */
+}
+/*
+ Task 4: Add styles for headings, paragraphs, and buttons 
+h1, h2, .lead, .btn-primary {
+     insert code here 
+}
+*/
+
+/* Customize font size, weight, and color for max-width and h2 */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 0 auto;
 }
 
-/* Task 4: Add styles for headings, paragraphs, and buttons */
-h1, h2, .lead, .btn-primary {
-    /* insert code here */
+h1 {
+    font-size: 2.5em; /* Customize the size */
+    font-weight: bold; /* Customize the weight */
+    color: #333; /* Customize the color */
+}
+
+h2 {
+    font-size: 2em; /* Customize the size */
+    font-weight: 600; /* Customize the weight */
+    color: #555; /* Customize the color */
+}
+
+/* Style .lead for the quote */
+.lead {
+    font-size: 1.25em; /* Customize the size for readability */
+    font-style: italic; /* Italicize for quote styling */
+    color: #666; /* Customize the color */
+    margin: 20px 0; /* Adjust margin for spacing */
+}
+
+/* Adjust .btn-primary for the button’s visual design */
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding for button size */
+    font-size: 1em; /* Customize the font size */
+    color: #fff; /* Set text color */
+    background-color: #007bff; /* Set background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round the corners */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center align text */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Add transition for smooth hover effect */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darken background on hover */
 }

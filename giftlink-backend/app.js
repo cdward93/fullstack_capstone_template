@@ -36,7 +36,7 @@ app.use(pinoHttp({ logger }));
 
 // Use Routes
 // Gift API Task 2: add the giftRoutes to the server by using the app.use() method.
-app.use('./api/gifts', giftsRoute);
+app.use('./api/gifts', giftsRoutes);
 
 // Search API Task 2: add the searchRoutes to the server by using the app.use() method.
 app.use('api/search', searchRoutes)
