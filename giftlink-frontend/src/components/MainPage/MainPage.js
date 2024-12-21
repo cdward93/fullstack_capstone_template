@@ -36,7 +36,7 @@ function MainPage() {
     // Task 3: Format timestamp
     const formatDate = (timestamp) => {
        const date = new Date(timestamp * 1000);
-       return date.toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' });
+       return date.toLocalDateString('default', { month: 'long', day: 'numeric', year: 'numeric' });
       };
 
     const getConditionClass = (condition) => {
@@ -68,7 +68,7 @@ function MainPage() {
                                 </p>
 
                                 {/* // Task 6: Display gift image or placeholder */}
-                                <p className="card-text date-added">{formatDate(gift.date_added)}</p>
+                                <p className="card-text">{formatDate(gift.date_added)}</p>
                                 
 
                                 <button onClick={() => goToDetailsPage(gift.id)} className="btn btn-primary w-100">
