@@ -3,6 +3,7 @@ const router = express.Router();
 const connectToDatabase = require('../models/db');
 const logger = require('../logger');
 
+// Get all gifts
 router.get('/', async (req, res, next) => {
     logger.info('/ called');
     try {
@@ -25,6 +26,7 @@ router.get('/', async (req, res, next) => {
     }
 });
 
+// Get a single gift by ID
 router.get('/:id', async (req, res, next) => {
     try {
         // Task 1: Connect to MongoDB and store connection to db constant
