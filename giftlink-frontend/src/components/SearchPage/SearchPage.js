@@ -62,9 +62,6 @@ function SearchPage() {
         // Task 6. Enable navigation to the details page of a selected gift.
     };
 
-
-
-
     return (
         <div className="container mt-5">
             <div className="row justify-content-center">
@@ -73,11 +70,12 @@ function SearchPage() {
                         <h5>Filters</h5>
                         <div className="d-flex flex-column">
                             {/* Task 3: Dynamically generate category and condition dropdown options.*/}
+                            <label htmlFor="categorySelect">Category</label>
                             <select id="categorySelect" className="form-control my-1">
-                                <option value="">All</option>
+                                 <option value="">All</option>
                                 {categories.map(category => (
-                                    <option key={category} value={category}>{category}</option>
-                                ))}
+                                <option key={category} value={category}>{category}</option>
+                                  ))}
                             </select>
                             {/* Condition Dropdown */}
                             <label htmlFor="conditionSelect">Condition</label>
