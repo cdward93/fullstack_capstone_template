@@ -6,11 +6,11 @@ function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    // Create handleLogin function and include console.log
-    const handleLogin = async () => {
+    const handleLogin = async (e) => {
+        e.preventDefault();
         console.log("Inside handleLogin");
     }
-
+    
     return (
         <div className="container mt-5">
             <div className="row justify-content-center">
